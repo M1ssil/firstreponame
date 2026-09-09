@@ -13,3 +13,7 @@ Console.WriteLine("dag " + dag);
 /* Also a comment */
 
 // single line comment
+
+double d = 2.0;
+int i = (int) d;
+// når man skal få det til at blive et helt tal
