@@ -17,3 +17,6 @@ Console.WriteLine("dag " + dag);
 double d = 2.0;
 int i = (int) d;
 // når man skal få det til at blive et helt tal
+
+bool b = true;
+// true or false
