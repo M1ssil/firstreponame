@@ -28,6 +28,7 @@ Console.WriteLine(Area(1));
 Console.WriteLine(Area(3));
 Console.WriteLine(Area(5));
 
+//disable ai --> false -> det er en god tool :)
 
 double celciusToFahrenheit(double celcius){
     return celcius * 9 / 5 + 32;
@@ -37,4 +38,14 @@ double fahrenheitToCelcius(double fahrenheit){
 }
 Console.WriteLine(celciusToFahrenheit(20));
 Console.WriteLine(fahrenheitToCelcius(38));
+
+
+// timestamp
+long seconds = 100000000;
+long days = seconds/86400;
+long years = days/365;
+long year = 1970 + years;
+long remaining_days = days % 365;
+long month = remaining_days / 30;
+Console.WriteLine(year + "/" + month);
 
