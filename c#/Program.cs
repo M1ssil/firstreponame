@@ -28,3 +28,13 @@ Console.WriteLine(Area(1));
 Console.WriteLine(Area(3));
 Console.WriteLine(Area(5));
 
+
+double celciusToFahrenheit(double celcius){
+    return celcius * 9 / 5 + 32;
+}
+double fahrenheitToCelcius(double fahrenheit){
+    return (fahrenheit - 32) * 5 / 9;
+}
+Console.WriteLine(celciusToFahrenheit(20));
+Console.WriteLine(fahrenheitToCelcius(38));
+
