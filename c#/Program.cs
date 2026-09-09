@@ -91,3 +91,10 @@ Console.WriteLine(diff);
 * the average lifespan of each gender and then we take both answers and see the difference between the genders 
 */
 
+// exercise 5.16
+int ii = 42;
+long ll = 56;
+float ff = 3.14159F;
+double dd = 3.14159 * 10;
+Console.WriteLine("ii = {0} \nll = {1,4} \nff = {2} \ndd = {3,6:0.00}", ii, ll, ff, dd);
+
