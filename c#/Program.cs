@@ -124,6 +124,7 @@ OR -> (name1) || (name2) -> True when: at least one expression is true
 XOR -> (name1) ^ (name2) -> True when: exactly one expression is true
 */
 
+
 /* how to use { and if statements
 int i = 11;
 Console.WriteLine("Input is "+i);
@@ -134,6 +135,7 @@ i++;
 Console.WriteLine("Output is "+i);
 */
 
+
 /* else statement
 int i = 1, j = 2, k = 3;
 if (i < j){
@@ -142,6 +144,7 @@ if (i < j){
 Console.WriteLine("B");
 }
 */
+
 
 /* else if statements (change char direction to get a certain line)
 char direction = 'n';
@@ -157,6 +160,7 @@ Console.WriteLine("Going west ...");
 Console.WriteLine("I don't understand ?!?");
 }
 */
+
 
 /* switch statement (kører hurtigere end en else if statement) 
 switch (direction) {
@@ -180,3 +184,45 @@ break;
 Break -> Without a break statement, the flow continues to the next case.
 */
 
+
+/* Loops -> basically a spam in n times
+Three types of loops: while, do-while, for
+    Only executes if a statement is true
+
+While:
+
+int i = 0;
+while (i<10) {
+    Console.WriteLine(i);
+    i++;
+}
+
+
+Do-while:
+
+int i = 12345;
+do {
+Console.WriteLine(i%10);
+i /= 10;
+} while (i>0);
+
+
+For:
+
+for (int i=0 ; i<10 ; i++) {
+Console.WriteLine(i);
+}
+
+
+Combinations:
+
+while ( <condition> ) {
+<statement>
+}
+if ( <condition> ) {
+do {
+<statement>
+} while ( <condition> );
+}
+
+*/
