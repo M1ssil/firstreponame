@@ -310,11 +310,39 @@ Console.WriteLine(price);
 */
 
 
-//Exercise 6.4
+/* Exercise 6.4
+int month = 12;
+int length = -1;
+length = (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 ||
+month == 10 || month == 12 ? 31 : 0)
++ (month == 2 ? 28 : 0)
++ (month == 4 || month == 6 || month == 9 || month == 11 ? 30 : 0);
+if (length == -1) {
+Console.WriteLine("Error: Month \"" + month + "\" is outside of [1,12]");
+} else {
+Console.WriteLine(length);
+}
+*/
 
 
+/* Exercise 6.5
+int month = 9;
 
-//Exercise 6.5
+if (month == 10) {
+    Console.WriteLine("Finally there is a holiday in autumn!");
+}
+else if (month == 12) {
+    Console.WriteLine("Christmas time!");
+}
+else if (month == 4) {
+    Console.WriteLine("Yay it's easter holidays!");
+}
+else if (month == 7 || month == 8) {
+    Console.WriteLine("Lets gooo its time for some summer vacation!");
+}
+else {
+    Console.WriteLine("No holiday month :c");
+} */
 
 
 //Exercise 6.6
