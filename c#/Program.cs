@@ -1,6 +1,6 @@
-﻿/*
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Hello, World!");
 
+/*
 string name = "Project nummer 1";
 Console.WriteLine(name);
 
@@ -124,3 +124,12 @@ OR -> (name1) || (name2) -> True when: at least one expression is true
 XOR -> (name1) ^ (name2) -> True when: exactly one expression is true
 */
 
+/* how to use { and if statements
+int i = 11;
+Console.WriteLine("Input is "+i);
+if (i%2==1) {
+Console.WriteLine("Let me adjust that for you ...");
+i++;
+}
+Console.WriteLine("Output is "+i);
+*/
