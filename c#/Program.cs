@@ -345,7 +345,15 @@ else {
 } */
 
 
-//Exercise 6.6
+/* Exercise 6.6
+int celcius = -5;
+double CelciusToFahrenheit(double c){
+    return c * 9 / 5 + 32;
+}
+while (celcius < 40){
+    Console.WriteLine(CelciusToFahrenheit(celcius));
+    celcius++;
+} */
 
 
 //Exercise 6.9
