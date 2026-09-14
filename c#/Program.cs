@@ -227,6 +227,51 @@ do {
 <statement>
 } while ( <condition> );
 }
+
+Numbers going the sequence 2,4,6,8....
+for (int i=1 ; i<=10 ; i++) {
+Console.WriteLine(2*i);
+}
+
+
+Nested loops -> loop inside a loop
+for (int y=1 ; y<=10 ; y++) {
+for (int x=1 ; x<=y ; x++) {
+Console.Write(string.Format("{0,4}", x*y));
+}
+Console.WriteLine("");
+}
+
+Fun fact: if you loop inside a loop and loop inside of that you can be able to make a "tre-diminsionel" world
+*/
+
+
+/* Flow control -
+
+Break -> used to break out of the loop and continue at the first statement after the loop definition.
+
+int i;
+for (i=0 ; i<10 ; i++) {
+if (i==5) {
+break;
+}
+}
+Console.WriteLine(i);
+-Result will be 5-
+
+
+Continue -> skips the rest of the loop body.
+
+int i;
+int sum = 0;
+for (i=0 ; i<4 ; i++) {
+if (i==2) {
+continue;
+}
+sum += i;
+}
+Console.WriteLine(sum);
+-Result 4-
 */
 
 
