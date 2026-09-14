@@ -158,4 +158,25 @@ Console.WriteLine("I don't understand ?!?");
 }
 */
 
+/* switch statement (kører hurtigere end en else if statement) 
+switch (direction) {
+case 'N':
+Console.WriteLine("Going north ...");
+break;
+case 'S':
+Console.WriteLine("Going south ...");
+break;
+case 'E':
+Console.WriteLine("Going east ...");
+break;
+case 'W':
+Console.WriteLine("Going west ...");
+break;
+default:
+Console.WriteLine("I don't understand ?!?");
+break;
+}
+
+Break -> Without a break statement, the flow continues to the next case.
+*/
 
