@@ -277,4 +277,50 @@ Console.WriteLine(sum);
 
 // Øvelsestime 14/09
 
+/* Exercise 5.20
+byte dice = 6;
+bool draw = (dice & 1) != 1 && dice > 3;
+Console.WriteLine(draw); 
+*/
 
+
+/* Exercise 6.3
+int secs_since_newyear = 21816000;
+double price = 599.95;
+int secs_day = 86400;
+int days_month = 30;
+
+// Day-of-year (0-indexed) that this many seconds falls on
+int day_of_year = secs_since_newyear / secs_day;
+
+// Convert to month (1-12) and day-of-month (1-30)
+int month = (day_of_year / days_month) + 1;
+int day_of_month = (day_of_year % days_month) + 1;
+
+bool christmas = (month == 12 && day_of_month == 25);
+
+if (christmas){
+    price = 599.95 * 0.7;
+}
+else{
+    price = 599.95;
+}
+
+Console.WriteLine(price);
+*/
+
+
+//Exercise 6.4
+
+
+
+//Exercise 6.5
+
+
+//Exercise 6.6
+
+
+//Exercise 6.9
+
+
+//Exercise 6.10
