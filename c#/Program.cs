@@ -133,3 +133,14 @@ i++;
 }
 Console.WriteLine("Output is "+i);
 */
+
+/* else statement
+int i = 1, j = 2, k = 3;
+if (i < j){
+    if (i > k)
+        Console.WriteLine("A");
+Console.WriteLine("B");
+}
+*/
+
+
