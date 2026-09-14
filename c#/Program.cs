@@ -98,3 +98,12 @@ float ff = 3.14159F;
 double dd = 3.14159 * 10;
 Console.WriteLine("ii = {0} \nll = {1,4} \nff = {2} \ndd = {3,6:0.00}", ii, ll, ff, dd);
 
+// boolean types
+/*
+bool (name) = (t/f?);
+NOT -> !(name) -> True when: an expression isnt true
+AND -> (name1) && (name2) -> True when: both expressions are true
+OR -> (name1) || (name2) -> True when: at least one expression is true
+XOR -> (name1) ^ (name2) -> True when: exactly one expression is true
+*/
+
