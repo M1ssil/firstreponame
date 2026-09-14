@@ -16,6 +16,8 @@ Console.WriteLine("dag " + dag);
 
 // single line comment
 
+
+//Øvelsestime 09/09
 /*
 double d = 2.0;
 int i = (int) d;
@@ -115,6 +117,7 @@ Console.WriteLine("ii = {0} \nll = {1,4} \nff = {2} \ndd = {3,6:0.00}", ii, ll, 
 */
 
 
+// Forelæsning 14/09
 // boolean types
 /*
 bool (name) = (t/f?);
@@ -224,5 +227,9 @@ do {
 <statement>
 } while ( <condition> );
 }
-
 */
+
+
+// Øvelsestime 14/09
+
+
