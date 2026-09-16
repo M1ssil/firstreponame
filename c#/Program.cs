@@ -370,10 +370,36 @@ Console.WriteLine(Area(5)); */
 
 
 // Forelæsning 14/09
+/* int[] months;
+months = new int[12]; */
+
+/* 
+int-array All elements in the array start with the value 0
+string-array All elements in the array start with the value null
+bool-array All elements in the array start with the value false 
+*/
+
+// String arrays
+/* 
+string[] stringArray = [
+"This", "is", "an", "example", "of", "a", "String", "array"
+];
+for (int i = 0; i < stringArray.Length; i++) {
+Console.Write(stringArray[i] + " ");
+}
+Console.WriteLine(""); 
+*/
+
+// Traversing array
+/* int[] months = [31,28,31,30,31,30,31,31,30,31,30,31];
+for (int i=0 ; i<months.Length ; i++) {
+Console.WriteLine("Month "+(i+1)+" has "+months[i]+" days");
+} */
+
+
 
 
 // Øvelsestime 16/09
-
 // Exercise 7.4
 /* int[] numbers = [1, 10, 3, 92, 18];
 int max = numbers[0];
@@ -388,12 +414,18 @@ Console.WriteLine(max);
 
 
 // Exercise 7.15
-class Person {
+/* class Person {
     public int height;
     public int age;
     public bool male;
     public float shoesize;
     public char birthmonth;
-}
+} */
 
-// Exercise 
+// Exercise 7.3
+// Exercise 7.5
+// Exercise 7.7
+// Exercise 7.12
+// Exercise 7.16
+// Exercise 7.14
+// Exercise 7.8
