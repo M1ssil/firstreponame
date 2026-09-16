@@ -286,7 +286,7 @@ Console.WriteLine(draw);
 
 /* Exercise 6.3
 int secs_since_newyear = 21816000;
-double price = 599.95;
+float price = 599.95;
 int secs_day = 86400;
 int days_month = 30;
 
@@ -347,7 +347,7 @@ else {
 
 /* Exercise 6.6
 int celcius = -5;
-double CelciusToFahrenheit(double c){
+float CelciusToFahrenheit(double c){
     return c * 9 / 5 + 32;
 }
 while (celcius < 40){
@@ -356,7 +356,18 @@ while (celcius < 40){
 } */
 
 
-//Exercise 6.9
+/* Exercise 6.9
+double Area(double radius){
+    return Math.PI * radius * radius;
+}
+Console.WriteLine(Area(1));
+Console.WriteLine(Area(3));
+Console.WriteLine(Area(5)); */
 
 
 //Exercise 6.10
+// virkelig svær
+
+
+// Forelæsning 14/09
+
