@@ -371,4 +371,3 @@ Console.WriteLine(Area(5)); */
 
 // Forelæsning 14/09
 
-hi
