@@ -426,6 +426,137 @@ Console.WriteLine("In year "+i+" February is "+months[1]+
 
 
 // Arrays of Arrays
+// We have seen that we can declare arrays like this:
+/* int[] ints = [1,2,3,4];
+double[] doubles = [1.0,2.0,3.0,4.0];
+bool[] bools = [false,true,false,true];
+
+If you can make an array of any type, can you then also make an array of arrays?
+
+Maybe do this?
+int[][] arrayofarray = [[1,2,3,4], [2,3,4,5], [3,4,5,6], [4,5,6,7]]; 
+*/
+
+
+/* Layout in Memory
+int[][] arrayofarray = [
+[1,2,3,4],
+[2,3,4,5],
+[3,4,5,6],
+[4,5,6,7]
+];
+Console.WriteLine(arrayofarray[2]);
+Console.WriteLine(arrayofarray[2][3]);
+*/
+
+/* Tables
+int[][] array = new int[4][];
+// code for filling out array -> udfyld for at run kan virke
+array[3] = [43, -6, 17, 100, 1, -12];
+
+intArray[3][2]
+*/
+
+/* Examples with profits in stores 
+double[][] profit = new double[25][];
+double totalProfit = 0; // total profit of last year
+int store; // variable for looping through stores
+int month; // variable for looping through months
+// code for filling out profit
+for ( store=0 ; store<25 ; store++ ) {
+for ( month=0 ; month<12 ; month++ ) {
+totalProfit += profit[store][month];
+}
+}
+*/
+
+/* Jagged Arrays --> All inner arrays do not have to have the same length
+int[][] jagged = new int[4][]{
+new int[1]{1},
+new int[2]{2,3},
+new int[3]{3,4,5},
+new int[4]{4,5,6,7}
+};
+for (int y=0 ; y<jagged.Length ; y++) {
+for (int x=0 ; x<jagged[0].Length ; x++) {
+Console.WriteLine("jagged["+y+"]["+x+
+"] = "+jagged[y][x]);
+}
+}
+*/
+
+
+// Multidimensional Arrays
+/* Instead of arrays of arrays, one can often use multidimensional arrays.
+They are not structured as an outer array with references to inner arrays.
+Instead, the sizes of the dimensions are fixed, and this allows elements to be accessed
+directly. */
+
+/* Layout in Memory
+int[,] marray = {
+{1,2,3,4},
+{2,3,4,5},
+{3,4,5,6},
+{4,5,6,7}
+};
+int[] array = {
+1,2,3,4,
+2,3,4,5,
+3,4,5,6,
+4,5,6,7
+};
+*/
+
+/* vs Arrays of Arrays
+Multidimensional arrays compared to arrays of arrays:
+I Lookup “costs” only one lookup in memory and is therefore faster.
+Arrays of arrays compared to multidimensional arrays:
+I Allows 2D structures that are not rectangular, and similar for 2+ dimensional
+structures.
+I Allows indices in the first dimension to refer to the same inner array (and thereby
+save space).
+Which implementation is best depends largely on the problem you are facing.
+Often, it does not matter. */
+
+// Structs
+/* Colors
+In a computer, colors are typically represented as three values:
+1. Red intensity, 2. Green intensity, 3. Blue intensity
+By mixing these values, any visible color can be represented
+Each of these color components is usually divided into 256 levels. This can be
+represented using a byte for each:
+byte red;
+byte green;
+byte blue;
+*/
+
+/* Definition
+Problem: Sometimes values belong together, and we want to work with them as if
+they were a single value.
+A struct is a structure of values, that lie next to each other in memory. In C# the kind
+of structs (that we care about) are called “classes”.
+Declaration:
+class Color {
+public byte red;
+public byte green;
+public byte blue;
+} */
+
+/* Example
+Color magenta = new Color { red=255 , green=0 , blue=255 };
+Console.WriteLine("red="+magenta.red+" green="+magenta.green+"blue="+magenta.blue);
+
+// darken color
+magenta.red /=2;
+magenta.green /=2;
+magenta.blue /=2;
+Console.WriteLine("red="+magenta.red+" green="+magenta.green+"blue="+magenta.blue);
+class Color {
+    public byte red;
+    public byte green;
+    public byte blue;
+} */
+
 
 
 
@@ -450,6 +581,7 @@ Console.WriteLine(max);
     public bool male;
     public float shoesize;
     public char birthmonth;
+    public string name;
 } */
 
 // Exercise 7.3
