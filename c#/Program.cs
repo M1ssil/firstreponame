@@ -387,3 +387,13 @@ Console.WriteLine(max);
 */
 
 
+// Exercise 7.15
+class Person {
+    public int height;
+    public int age;
+    public bool male;
+    public float shoesize;
+    public char birthmonth;
+}
+
+// Exercise 
