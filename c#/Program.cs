@@ -1,12 +1,11 @@
 ﻿Console.WriteLine("Hello, World!");
 
-/*
+/* Små ting
 string name = "Project nummer 1";
 Console.WriteLine(name);
 
 int dag = 1;
-Console.WriteLine("dag " + dag);
-*/
+Console.WriteLine("dag " + dag); */
 
 /*
 * block comment
@@ -18,10 +17,9 @@ Console.WriteLine("dag " + dag);
 
 
 //Øvelsestime 09/09
-/*
+/* når man skal få det til at blive et helt tal
 double d = 2.0;
-int i = (int) d;
-// når man skal få det til at blive et helt tal
+int i = (int) d; */
 
 //bool true eller false
 
@@ -31,14 +29,13 @@ double Area(double radius){
 }
 Console.WriteLine(Area(1));
 Console.WriteLine(Area(3));
-Console.WriteLine(Area(5));
-*/
+Console.WriteLine(Area(5)); */
 
 
 //disable ai --> false -> det er en god tool :)
 
 
-/*
+/* celcius to fahrenheit
 double celciusToFahrenheit(double celcius){
     return celcius * 9 / 5 + 32;
 }
@@ -46,8 +43,7 @@ double fahrenheitToCelcius(double fahrenheit){
     return (fahrenheit - 32) * 5 / 9;
 }
 Console.WriteLine(celciusToFahrenheit(20));
-Console.WriteLine(fahrenheitToCelcius(38));
-*/
+Console.WriteLine(fahrenheitToCelcius(38)); */
 
 
 /* timestamp
@@ -57,30 +53,27 @@ long years = days/365;
 long year = 1970 + years;
 long remaining_days = days % 365;
 long month = remaining_days / 30;
-Console.WriteLine(year + "/" + month);
-*/
+Console.WriteLine(year + "/" + month); */
 
 
-/*temp difference in a week
+/* temp difference in a week
 double monday = 21.5;
 double tuesday = 23.7;
 double wednesday = 19.6;
 double thursday = 22.5;
 double friday = 25.3;
 double saturday = 21.7;
-double sunday = 18.9;
-*/
+double sunday = 18.9; */
 
 
-/*
+/* exercise with weekdays
 Console.WriteLine(tuesday - monday);
 Console.WriteLine(wednesday - tuesday);
 Console.WriteLine(thursday - wednesday);
 Console.WriteLine(friday - thursday);
 Console.WriteLine(saturday - friday);
 Console.WriteLine(sunday - saturday);
-Console.WriteLine(monday - sunday);
-*/
+Console.WriteLine(monday - sunday); */
 
 
 /* exercise 5.15
@@ -104,8 +97,7 @@ Console.Write("Males live this much longer than females: ");
 Console.WriteLine(diff);
 
 In this coding we see that we first start with giving all variables a number and afterwards finding
-the average lifespan of each gender and then we take both answers and see the difference between the genders 
-*/
+the average lifespan of each gender and then we take both answers and see the difference between the genders  */
 
 
 /* exercise 5.16
@@ -113,19 +105,16 @@ int ii = 42;
 long ll = 56;
 float ff = 3.14159F;
 double dd = 3.14159 * 10;
-Console.WriteLine("ii = {0} \nll = {1,4} \nff = {2} \ndd = {3,6:0.00}", ii, ll, ff, dd);
-*/
+Console.WriteLine("ii = {0} \nll = {1,4} \nff = {2} \ndd = {3,6:0.00}", ii, ll, ff, dd); */
 
 
 // Forelæsning 14/09
-// boolean types
-/*
+/* boolean types
 bool (name) = (t/f?);
 NOT -> !(name) -> True when: an expression isnt true
 AND -> (name1) && (name2) -> True when: both expressions are true
 OR -> (name1) || (name2) -> True when: at least one expression is true
-XOR -> (name1) ^ (name2) -> True when: exactly one expression is true
-*/
+XOR -> (name1) ^ (name2) -> True when: exactly one expression is true */
 
 
 /* how to use { and if statements
@@ -135,8 +124,7 @@ if (i%2==1) {
 Console.WriteLine("Let me adjust that for you ...");
 i++;
 }
-Console.WriteLine("Output is "+i);
-*/
+Console.WriteLine("Output is "+i); */
 
 
 /* else statement
@@ -145,8 +133,7 @@ if (i < j){
     if (i > k)
         Console.WriteLine("A");
 Console.WriteLine("B");
-}
-*/
+} */
 
 
 /* else if statements (change char direction to get a certain line)
@@ -161,8 +148,7 @@ Console.WriteLine("Going east ...");
 Console.WriteLine("Going west ...");
 } else {
 Console.WriteLine("I don't understand ?!?");
-}
-*/
+} */
 
 
 /* switch statement (kører hurtigere end en else if statement) 
@@ -184,8 +170,7 @@ Console.WriteLine("I don't understand ?!?");
 break;
 }
 
-Break -> Without a break statement, the flow continues to the next case.
-*/
+Break -> Without a break statement, the flow continues to the next case. */
 
 
 /* Loops -> basically a spam in n times
@@ -193,7 +178,6 @@ Three types of loops: while, do-while, for
     Only executes if a statement is true
 
 While:
-
 int i = 0;
 while (i<10) {
     Console.WriteLine(i);
@@ -202,7 +186,6 @@ while (i<10) {
 
 
 Do-while:
-
 int i = 12345;
 do {
 Console.WriteLine(i%10);
@@ -211,14 +194,12 @@ i /= 10;
 
 
 For:
-
 for (int i=0 ; i<10 ; i++) {
 Console.WriteLine(i);
 }
 
 
 Combinations:
-
 while ( <condition> ) {
 <statement>
 }
@@ -241,13 +222,10 @@ Console.Write(string.Format("{0,4}", x*y));
 }
 Console.WriteLine("");
 }
-
-Fun fact: if you loop inside a loop and loop inside of that you can be able to make a "tre-diminsionel" world
-*/
+Fun fact: if you loop inside a loop and loop inside of that you can be able to make a "tre-diminsionel" world */
 
 
 /* Flow control -
-
 Break -> used to break out of the loop and continue at the first statement after the loop definition.
 
 int i;
@@ -258,7 +236,6 @@ break;
 }
 Console.WriteLine(i);
 -Result will be 5-
-
 
 Continue -> skips the rest of the loop body.
 
@@ -271,8 +248,7 @@ continue;
 sum += i;
 }
 Console.WriteLine(sum);
--Result 4-
-*/
+-Result 4- */
 
 
 // Øvelsestime 14/09
@@ -280,8 +256,7 @@ Console.WriteLine(sum);
 /* Exercise 5.20
 byte dice = 6;
 bool draw = (dice & 1) != 1 && dice > 3;
-Console.WriteLine(draw); 
-*/
+Console.WriteLine(draw); */
 
 
 /* Exercise 6.3
@@ -305,9 +280,7 @@ if (christmas){
 else{
     price = 599.95;
 }
-
-Console.WriteLine(price);
-*/
+Console.WriteLine(price); */
 
 
 /* Exercise 6.4
@@ -321,8 +294,7 @@ if (length == -1) {
 Console.WriteLine("Error: Month \"" + month + "\" is outside of [1,12]");
 } else {
 Console.WriteLine(length);
-}
-*/
+} */
 
 
 /* Exercise 6.5
@@ -373,11 +345,9 @@ Console.WriteLine(Area(5)); */
 /* int[] months;
 months = new int[12]; */
 
-/* 
-int-array All elements in the array start with the value 0
+/* int-array All elements in the array start with the value 0
 string-array All elements in the array start with the value null
-bool-array All elements in the array start with the value false 
-*/
+bool-array All elements in the array start with the value false  */
 
 // String arrays
 /* 
@@ -387,8 +357,7 @@ string[] stringArray = [
 for (int i = 0; i < stringArray.Length; i++) {
 Console.Write(stringArray[i] + " ");
 }
-Console.WriteLine(""); 
-*/
+Console.WriteLine("");  */
 
 // Traversing array
 /* int[] months = [31,28,31,30,31,30,31,31,30,31,30,31];
@@ -405,8 +374,7 @@ int i;
 for (i=0; i<doubleArray.Length; i++) {
 total += doubleArray[i];
 }
-average = total / doubleArray.Length;
-*/
+average = total / doubleArray.Length; */
 
 
 //Reference Manipulation
@@ -421,8 +389,7 @@ or do this -> : int[] months = (i%4==0 ? monthsLeap : monthsNormal);
 }
 Console.WriteLine("In year "+i+" February is "+months[1]+
 " days long");
-}
-*/
+} */
 
 
 // Arrays of Arrays
@@ -434,8 +401,7 @@ bool[] bools = [false,true,false,true];
 If you can make an array of any type, can you then also make an array of arrays?
 
 Maybe do this?
-int[][] arrayofarray = [[1,2,3,4], [2,3,4,5], [3,4,5,6], [4,5,6,7]]; 
-*/
+int[][] arrayofarray = [[1,2,3,4], [2,3,4,5], [3,4,5,6], [4,5,6,7]];  */
 
 
 /* Layout in Memory
@@ -446,16 +412,14 @@ int[][] arrayofarray = [
 [4,5,6,7]
 ];
 Console.WriteLine(arrayofarray[2]);
-Console.WriteLine(arrayofarray[2][3]);
-*/
+Console.WriteLine(arrayofarray[2][3]); */
 
 /* Tables
 int[][] array = new int[4][];
 // code for filling out array -> udfyld for at run kan virke
 array[3] = [43, -6, 17, 100, 1, -12];
 
-intArray[3][2]
-*/
+intArray[3][2] */
 
 /* Examples with profits in stores 
 double[][] profit = new double[25][];
@@ -467,8 +431,7 @@ for ( store=0 ; store<25 ; store++ ) {
 for ( month=0 ; month<12 ; month++ ) {
 totalProfit += profit[store][month];
 }
-}
-*/
+} */
 
 /* Jagged Arrays --> All inner arrays do not have to have the same length
 int[][] jagged = new int[4][]{
@@ -482,8 +445,7 @@ for (int x=0 ; x<jagged[0].Length ; x++) {
 Console.WriteLine("jagged["+y+"]["+x+
 "] = "+jagged[y][x]);
 }
-}
-*/
+} */
 
 
 // Multidimensional Arrays
@@ -504,8 +466,7 @@ int[] array = {
 2,3,4,5,
 3,4,5,6,
 4,5,6,7
-};
-*/
+}; */
 
 /* vs Arrays of Arrays
 Multidimensional arrays compared to arrays of arrays:
@@ -527,8 +488,7 @@ Each of these color components is usually divided into 256 levels. This can be
 represented using a byte for each:
 byte red;
 byte green;
-byte blue;
-*/
+byte blue; */
 
 /* Definition
 Problem: Sometimes values belong together, and we want to work with them as if
@@ -558,6 +518,53 @@ class Color {
 } */
 
 
+// Enums
+/*
+Let’s look at two primitive data types:
+I A bool is a type that can represent the values true and false.
+I A byte is a type that can represent the values 0, 1, 2, … 255.
+With an enum we can define our own type by manually listing all possible values.
+Example: A playing card’s suit:
+enum Suit {
+Spade,
+Heart,
+Diamond,
+Club,
+} */
+
+/* Comparison
+Enum values can be compared:
+Suit suit = Suit.Heart;
+if (suit == Suit.Diamond) {
+Console.WriteLine("Suit is diamond!");
+} else {
+Console.WriteLine("Suit is not diamond :-(");
+} */
+
+/* Casting to Integers
+Suit suit = Suit.Heart;
+int suitInt = (int) suit;
+Console.WriteLine(suitInt); */
+
+/* Example
+Color[] colors = new Color[(int) ColorName.Count];
+colors[(int) ColorName.Red] = new Color { red=255 , green= 0 , blue= 0 };
+colors[(int) ColorName.Green] = new Color { red= 0 , green=255 , blue= 0 };
+colors[(int) ColorName.Magenta] = new Color { red=255 , green= 0 , blue=255 };
+ColorName c = ColorName.Magenta;
+Color color = colors[(int) c];
+Console.WriteLine("red="+color.red+" green="+color.green+" blue="+color.blue);
+enum ColorName {
+    Red,
+    Green,
+    Magenta,
+    Count,
+}
+class Color {
+    public byte red;
+    public byte green;
+    public byte blue;
+} */
 
 
 // Øvelsestime 16/09
