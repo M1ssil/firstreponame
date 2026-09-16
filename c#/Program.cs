@@ -371,3 +371,19 @@ Console.WriteLine(Area(5)); */
 
 // Forelæsning 14/09
 
+
+// Øvelsestime 16/09
+
+// Exercise 7.4
+/* int[] numbers = [1, 10, 3, 92, 18];
+int max = numbers[0];
+
+foreach (int number in numbers){
+        if (number > max){
+            max = number;
+        }
+}
+Console.WriteLine(max);
+*/
+
+
