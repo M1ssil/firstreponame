@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Velkommen agalar!");
 
 /* Små ting
 string name = "Project nummer 1";
@@ -591,10 +591,30 @@ Console.WriteLine(max);
     public string name;
 } */
 
+
 // Exercise 7.3
+
+
+
 // Exercise 7.5
+
+
+
 // Exercise 7.7
+
+
+
 // Exercise 7.12
+
+
+
 // Exercise 7.16
+
+
+
 // Exercise 7.14
+
+
+
 // Exercise 7.8
+
