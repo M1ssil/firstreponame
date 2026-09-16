@@ -593,28 +593,65 @@ Console.WriteLine(max);
 
 
 // Exercise 7.3
-
+/* The array's type is T[] — its element type T is part of the type itself, 
+so int[] and string[] are different types, and the compiler only lets you store T (or subtypes of it) inside. */
 
 
 // Exercise 7.5
-
+/* You use square brackets [] with the size inside, in the new expression:
+int[] numbers = new int[5];
+The 5 inside [] tells the compiler how many elements to allocate space for */
 
 
 // Exercise 7.7
-
+// make this later
 
 
 // Exercise 7.12
+int[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+int[] normaldaysinyear = new int[12];
+normaldaysinyear[0] = 31;
+normaldaysinyear[1] = 28;
+normaldaysinyear[2] = 31;
+normaldaysinyear[3] = 30;
+normaldaysinyear[4] = 31;
+normaldaysinyear[5] = 30;
+normaldaysinyear[6] = 31;
+normaldaysinyear[7] = 31;
+normaldaysinyear[8] = 30;
+normaldaysinyear[9] = 31;
+normaldaysinyear[10] = 30;
+normaldaysinyear[11] = 31;
+
+int[] leapyeardays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+int[] pointer;
+for (int year = 2000; year <= 2020; year++) {
+    if (year % 4 == 0)
+        pointer = leapyeardays;
+    else
+        pointer = normaldaysinyear;
+}
+
+
+
+    
 
 
 
 // Exercise 7.16
-
+/* enum Direction {
+North,
+East,
+South,
+West,
+} */
 
 
 // Exercise 7.14
-
+// soduku puzzle :c
 
 
 // Exercise 7.8
-
+// already made and its in exercise 6.9
