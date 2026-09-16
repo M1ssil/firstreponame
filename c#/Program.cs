@@ -396,6 +396,18 @@ for (int i=0 ; i<months.Length ; i++) {
 Console.WriteLine("Month "+(i+1)+" has "+months[i]+" days");
 } */
 
+/*
+double[] doubleArray = new double[12];
+double total = 0;
+double average;
+int i;
+// insert code to fill up doubleArray -> der skal skrives noget kodning her før det virker!
+for (i=0; i<doubleArray.Length; i++) {
+total += doubleArray[i];
+}
+average = total / doubleArray.Length;
+*/
+
 
 
 
