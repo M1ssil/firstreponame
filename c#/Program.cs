@@ -663,6 +663,73 @@ enum direction {North, East, South, West,}
 
 
 // Exercise 7.14
-// soduku puzzle :c
+/* Fik hjælp her, det var for svært.
+int[,] sudoku = {
+    { 5, 3, 4, 6, 7, 8, 9, 1, 2 },
+    { 6, 7, 2, 1, 9, 5, 3, 4, 8 },
+    { 1, 9, 8, 3, 4, 2, 5, 6, 7 },
+    { 8, 5, 9, 7, 6, 1, 4, 2, 3 },
+    { 4, 2, 6, 8, 5, 3, 7, 9, 1 },
+    { 7, 1, 3, 9, 2, 4, 8, 5, 6 },
+    { 9, 6, 1, 5, 3, 7, 2, 8, 4 },
+    { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
+    { 3, 4, 5, 2, 8, 6, 1, 7, 9 },
+};
+
+bool isValid = CheckSudoku(sudoku);
+Console.WriteLine(isValid ? "The sudoku is correctly solved!" : "The sudoku is NOT correctly solved.");
+
+bool CheckSudoku(int[,] grid)
+{
+    // Check rows
+    for (int row = 0; row < 9; row++)
+    {
+        bool[] found = new bool[9];
+        for (int col = 0; col < 9; col++)
+        {
+            int value = grid[row, col];
+            if (value == 0)
+                return false; // empty cell
+
+            found[value - 1] = true;
+        }
+        if (Array.IndexOf(found, false) != -1)
+            return false; // a number 1-9 is missing in this row
+    }
+
+    // Check columns
+    for (int col = 0; col < 9; col++)
+    {
+        bool[] found = new bool[9];
+        for (int row = 0; row < 9; row++)
+        {
+            int value = grid[row, col];
+            found[value - 1] = true;
+        }
+        if (Array.IndexOf(found, false) != -1)
+            return false;
+    }
+
+    // Check 3x3 boxes
+    for (int boxRow = 0; boxRow < 9; boxRow += 3)
+    {
+        for (int boxCol = 0; boxCol < 9; boxCol += 3)
+        {
+            bool[] found = new bool[9];
+            for (int r = 0; r < 3; r++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    int value = grid[boxRow + r, boxCol + c];
+                    found[value - 1] = true;
+                }
+            }
+            if (Array.IndexOf(found, false) != -1)
+                return false;
+        }
+    }
+    
+    return true;
+} */
 
 
