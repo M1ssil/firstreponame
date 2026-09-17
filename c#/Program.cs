@@ -608,31 +608,22 @@ The 5 inside [] tells the compiler how many elements to allocate space for */
 
 
 // Exercise 7.12
-int [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-int[] normaldaysinyear = new int[12];
-        normaldaysinyear[0] = 31;
-        normaldaysinyear[1] = 28;
-        normaldaysinyear[2] = 31;
-        normaldaysinyear[3] = 30;
-        normaldaysinyear[4] = 31;
-        normaldaysinyear[5] = 30;
-        normaldaysinyear[6] = 31;
-        normaldaysinyear[7] = 31;
-        normaldaysinyear[8] = 30;
-        normaldaysinyear[9] = 31;
-        normaldaysinyear[10] = 30;
-        normaldaysinyear[11] = 31;
-
+/* int[] normaldaysinyear = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 int[] leapyeardays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-int[] pointer;
-for (int year = 2000; year <= 2020; year++) {
-    if (year % 4 == 0)
+for (int year = 2000; year <= 2020; year++){
+    int[] pointer;
+    if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
         pointer = leapyeardays;
     else
         pointer = normaldaysinyear;
-}
+
+    int totalDays = 0;
+    foreach (int days in pointer){
+        totalDays += days;
+    }
+    Console.WriteLine($"{year}: {totalDays} days");
+} // "$" is a string interpolation, which we can use instead of putting "text" + "text" */
 
                                             LAVER DETTE SENEREEEE!!!!
 
