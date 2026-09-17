@@ -604,7 +604,21 @@ The 5 inside [] tells the compiler how many elements to allocate space for */
 
 
 // Exercise 7.7
-// make this later
+/* A Sudoku puzzle is naturally a 9×9 grid, so the simplest representation is a 2D array:
+int[,] sudoku = new int[9, 9];
+sudoku[0, 0] = 5;
+sudoku[3, 7] = 9;
+
+Alternative: a jagged array (int[][]), which is an array of arrays:
+int[][] sudoku = new int[9][];
+for (int i = 0; i < 9; i++)
+    sudoku[i] = new int[9];
+
+Memory layout — the key difference:
+int[,] (a true 2D/multidimensional array) is stored as one single contiguous block of memory 
+— all 81 ints laid out row by row, back to back. 
+This is generally faster to access because of cache locality.
+Something like this*/
 
 
 // Exercise 7.12
@@ -625,13 +639,10 @@ for (int year = 2000; year <= 2020; year++){
     Console.WriteLine($"{year}: {totalDays} days");
 } // "$" is a string interpolation, which we can use instead of putting "text" + "text" */
 
-                                            LAVER DETTE SENEREEEE!!!!
-
 
 // Exercise 7.16 Directions
 /* Console.Write("Write down the direction: ");
 string input = Console.ReadLine();
-
 
 direction valgtRetning = Enum.Parse<direction>(input);
 // for the enum
@@ -655,5 +666,3 @@ enum direction {North, East, South, West,}
 // soduku puzzle :c
 
 
-// Exercise 7.8
-// already made and its in exercise 6.9
