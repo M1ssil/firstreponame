@@ -608,21 +608,21 @@ The 5 inside [] tells the compiler how many elements to allocate space for */
 
 
 // Exercise 7.12
-int[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+int [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 int[] normaldaysinyear = new int[12];
-normaldaysinyear[0] = 31;
-normaldaysinyear[1] = 28;
-normaldaysinyear[2] = 31;
-normaldaysinyear[3] = 30;
-normaldaysinyear[4] = 31;
-normaldaysinyear[5] = 30;
-normaldaysinyear[6] = 31;
-normaldaysinyear[7] = 31;
-normaldaysinyear[8] = 30;
-normaldaysinyear[9] = 31;
-normaldaysinyear[10] = 30;
-normaldaysinyear[11] = 31;
+        normaldaysinyear[0] = 31;
+        normaldaysinyear[1] = 28;
+        normaldaysinyear[2] = 31;
+        normaldaysinyear[3] = 30;
+        normaldaysinyear[4] = 31;
+        normaldaysinyear[5] = 30;
+        normaldaysinyear[6] = 31;
+        normaldaysinyear[7] = 31;
+        normaldaysinyear[8] = 30;
+        normaldaysinyear[9] = 31;
+        normaldaysinyear[10] = 30;
+        normaldaysinyear[11] = 31;
 
 int[] leapyeardays = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
@@ -634,19 +634,30 @@ for (int year = 2000; year <= 2020; year++) {
         pointer = normaldaysinyear;
 }
 
+                                            LAVER DETTE SENEREEEE!!!!
 
 
-    
+// Exercise 7.16 Directions
+/* Console.Write("Write down the direction: ");
+string input = Console.ReadLine();
 
 
+direction valgtRetning = Enum.Parse<direction>(input);
+// for the enum
 
-// Exercise 7.16
-/* enum Direction {
-North,
-East,
-South,
-West,
-} */
+if (valgtRetning == direction.South)
+    Console.WriteLine("You are heading south!");
+    else if (valgtRetning == direction.North){
+        Console.WriteLine("You are heading north!");
+    }
+    else if (valgtRetning == direction.West){
+        Console.WriteLine("You are heading west!");
+    }
+    else if (valgtRetning == direction.East){
+        Console.WriteLine("You are heading east!");
+    }
+enum direction {North, East, South, West,}
+// enum always at last */
 
 
 // Exercise 7.14
