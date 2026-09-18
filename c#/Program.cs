@@ -732,12 +732,13 @@ bool CheckSudoku(int[,] grid)
     return true;
 } */
 
-// Exercise 7.8 radius 
-double Area(double r){
+// Exercise 7.8 Area of a circle with using more proffesional items :b
+/* double Area(double r){
     return Math.PI * r * r;
 }
 for (int r = 0; r < 10; r++)
 {
     Console.WriteLine(Area(r));
-}
+    } */
+
 
