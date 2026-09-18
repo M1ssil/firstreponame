@@ -741,4 +741,98 @@ for (int r = 0; r < 10; r++)
     Console.WriteLine(Area(r));
     } */
 
+    
+// Lille hygge opgave inden PA1
+/* Opgave: Ugentlig temperaturstatistik
 
+Du har disse 7 temperaturer for en uge (brug dem som double[] eller lav dem selv):
+18.5, 21.2, 19.8, 23.1, 25.6, 20.3, 17.9
+
+Skriv et program der:
+Gemmer temperaturerne i et array.
+Finder og printer højeste og laveste temperatur i ugen (brug en for- eller foreach-loop, ikke en indbygget metode).
+Beregner og printer gennemsnitstemperaturen.
+Går igennem hver dag og printer, om det var en "varm dag" (over 22°C), "normal dag" (15–22°C) 
+eller "kold dag" (under 15°C) — brug if/else if/else eller switch.
+Bonus (hvis du har tid): brug en enum til at repræsentere ugedagene (Monday, Tuesday, ...) 
+og print ugedagsnavnet sammen med temperaturen og kategorien, fx:
+Monday: 18.5°C - Normal dag
+
+Krav til stil:
+Brug en funktion til gennemsnitsberegningen, fx double Average(double[] temps).
+Brug string interpolation ($"...") til print.
+Det her tester stort set det samme, som dine noter dækker (arrays, loops, betingelser, funktioner, evt. enum), 
+bare i en anden kontekst end det du allerede har lavet, så du ikke bare genkender løsningen udenad. */
+
+// del 1
+/* double[] temps = {18.5, 21.2, 19.8, 23.1, 25.6, 20.3, 17.9};
+
+// del 2
+double highest = temps[0];
+double lowest = temps[0];
+
+for (int i = 1; i < temps.Length; i++){
+    if (temps[i] > highest){
+        highest = temps[i];
+    }
+    if (temps[i] < lowest){
+        lowest = temps[i];
+    }
+}
+Console.WriteLine($"Highest temperature: {highest}°C");
+Console.WriteLine($"Lowest temperature: {lowest}°C");
+
+// del 3
+double Average(double[] temps){
+    double total = 0;
+    foreach (double temp in temps){
+        total += temp;
+    }
+    return total / temps.Length;
+}
+Console.WriteLine($"Average temperature: {Average(temps)}°C");
+
+// del 4
+foreach (double temp in temps){
+    if (temp >= 22){
+        Console.WriteLine($"{temp}°C - It is a warm day!");
+    }
+    else if (temp >= 15 && temp <= 22){
+        Console.WriteLine($"{temp}°C - Today is the temperature normal!");
+    }
+    else{
+        Console.WriteLine($"{temp}°C - It is a cold day!");
+    }
+}
+
+// del 5
+Day[] days = { Day.Monday, Day.Tuesday, Day.Wednesday, Day.Thursday, Day.Friday, Day.Saturday, Day.Sunday };
+
+for (int i = 0; i < temps.Length; i++){
+    string category;
+
+    if (temps[i] > 22){
+        category = "Varm dag";
+    }
+    else if (temps[i] >= 15){
+        category = "Normal dag";
+    }
+    else{
+        category = "Kold dag";
+    }
+
+    Console.WriteLine($"{days[i]}: {temps[i]}°C - {category}");
+}
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+} */
+// der er lige noget jeg ikke kan fatte ved del 5 men synes ellers det gik fint.
+
+
+    
