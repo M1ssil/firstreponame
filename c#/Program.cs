@@ -793,7 +793,7 @@ double Average(double[] temps){
 Console.WriteLine($"Average temperature: {Average(temps)}°C");
 
 // del 4
-foreach (double temp in temps){
+foreach (double temp in temps){ //brug temp, da temps er brugt og vil give error
     if (temp >= 22){
         Console.WriteLine($"{temp}°C - It is a warm day!");
     }
@@ -835,4 +835,41 @@ enum Day {
 // der er lige noget jeg ikke kan fatte ved del 5 men synes ellers det gik fint.
 
 
+// How to use switch (there is shown 3 ways)
+/* int day = 7;
+
+switch (day)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    default:
+        Console.WriteLine("Some other day");
+        break;
+}
+
+string name = day switch
+{
+    1 => "Monday",
+    2 => "Tuesday",
+    3 => "Wednesday",
+    _ => "Other"
+};
+
+string command = "start";
+switch (command)
+{
+    case "start":
+        Console.WriteLine("Starting...");
+        break;
+    case "stop":
+        Console.WriteLine("Stopping...");
+        break;
+} */
     
