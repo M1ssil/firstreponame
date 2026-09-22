@@ -872,4 +872,132 @@ switch (command)
         Console.WriteLine("Stopping...");
         break;
 } */
-    
+
+
+// Point-givende Aktivitet V
+/*
+// This exercise is about finding the highest negative number using an array of integers
+
+int[] numbers = [-5, 0, 13, 42, -19, -21]; // Making an array of numbers.
+
+int max = numbers[0]; // Defining max with an integer, and give it a value, where the number 0 was chosen.
+
+foreach (int number in numbers) // Using "foreach" because it has to go through every number
+                                // and define which one is the number we are searching for.
+                                // Defining the integer number in numbers.
+{
+        if (number < max) // Using "if" statement to tell the program 
+                          // that if the number is smaller than max (where max is anything above 0)
+                          // that it should give us that number.
+        {
+            max = number; // The number is now the new maximum
+        }
+}
+
+Console.WriteLine(max); // At last we print out the highest negative value,
+                        // where the number that will be printed is the number -21.
+*/
+// Point-givende Aktivitet ^
+
+
+// Øvelsestime 21/09
+
+// Exercise 5.4
+/*
+int i = 42;
+long l = i;        // implicit — int always fits in a long
+i = (int)l;         // explicit — long might not fit in an int
+
+float f = 3.14f;
+double d = f;       // implicit — float always fits in a double
+f = (float)d;        // explicit — double might not fit in a float
+*/
+
+
+// Exercise 5.12
+/*
+for (double i = 1; i <= 12; i += 0.5)
+{
+    switch (i)
+    {
+        case 1: Console.WriteLine("January"); break;
+        case 2: Console.WriteLine("February"); break;
+        case 3: Console.WriteLine("March"); break;
+        case 4: Console.WriteLine("April"); break;
+        case 5: Console.WriteLine("May"); break;
+        case 6: Console.WriteLine("June"); break;
+        case 7: Console.WriteLine("July"); break;
+        case 8: Console.WriteLine("August"); break;
+        case 9: Console.WriteLine("September"); break;
+        case 10: Console.WriteLine("October"); break;
+        case 11: Console.WriteLine("November"); break;
+        case 12: Console.WriteLine("December"); break;
+        default: Console.WriteLine("In the middle of the month: " + i); break;
+    }
+}
+*/
+
+
+// Exercise 5.19
+/* 
+double price = 599.95;
+double budget = 1000.0;
+bool requiredReading = true;
+bool shouldBuy = price < budget && requiredReading; 
+*/ 
+// idk what is this focused on (må løse den senere)
+
+
+// Exercise 5.21
+/* 
+int b = a + 1;
+Does this mean that a is an integer?
+- yes because if b = a + 1 that means still that b has to be a full number that makes a also be an integer
+Would the code compile if a is a non-numeric datatype?
+- idfk
+Would the code compile if a is a numeric datatype other than int? Which ones?
+- anything that is a full number 
+*/
+
+
+// Exercise 6.1
+//senere
+
+// Exercise 7.6
+/*
+int size = 30;
+int[] table = new int[size];
+
+for (int n = 0; n < size; n++)
+{
+    table[n] = 3 * n;
+}
+
+for (int n = 0; n < size; n++)
+{
+    Console.WriteLine(table[n]);
+}
+*/
+
+
+// Exercise 7.13
+//holy shit spring det her over
+
+
+// Exercise 7.17
+/*
+double meters = 1.234;
+Unit unit = Unit.mm;
+
+double factor = unit switch
+{
+    Unit.m => 1,
+    Unit.cm => 100,
+    Unit.mm => 1000,
+    Unit.inch => 1 / 0.0254
+};
+
+Console.WriteLine(meters * factor + " " + unit);
+
+enum Unit { m, cm, mm, inch }
+*/
