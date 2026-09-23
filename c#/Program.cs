@@ -1032,6 +1032,46 @@ Console.WriteLine("");
 }
 */
 
+// Anatomy of a Function
+/*
+int max (int num1, int num2) {
+int result;
+
+    if (num1 > num2) {
+        result = num1;
+    } 
+        else 
+        {
+        result = num2;
+        }
+return result;
+}
+*/
+
+// Can you use void instead of doing this?? -> Answer is: 
+/* 
+int[] fill (int[] array, int value) 
+{
+for (int i=0 ; i<array.Length ; i++) 
+    {
+    array[i] = value;
+    }
+return array;
+}
+
+// or 
+
+void fill (int[] array, int value) 
+{
+for (int i=0 ; i<array.Length ; i++) 
+    {
+    array[i] = value;
+    }
+}
+*/
+
+
+
 
 
 // Exercises 23/09
