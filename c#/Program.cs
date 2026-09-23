@@ -1071,9 +1071,6 @@ for (int i=0 ; i<array.Length ; i++)
 */
 
 
-
-
-
 // Exercises 23/09
 
 // Exercise 8.4
@@ -1090,14 +1087,66 @@ int Sum(int a, int b)
 // Exercise 8.3
 /*
 int[][] puzzle = {
-new int[] {7, 3, 6, 4, 5, 2, 9, 8, 1},
-new int[] {1, 9, 8, 6, 3, 7, 4, 5, 2},
-new int[] {4, 2, 5, 9, 8, 1, 3, 7, 6},
-new int[] {3, 6, 4, 5, 2, 8, 1, 9, 7},
-new int[] {9, 5, 2, 7, 1, 4, 6, 3, 8},
-new int[] {8, 1, 7, 3, 9, 6, 2, 4, 5},
-new int[] {2, 8, 9, 1, 7, 3, 5, 6, 4},
-new int[] {6, 7, 3, 2, 4, 5, 8, 1, 9},
-new int[] {5, 4, 1, 8, 6, 9, 7, 2, 3},
+    new int[] {7, 3, 6, 4, 5, 2, 9, 8, 1},
+    new int[] {1, 9, 8, 6, 3, 7, 4, 5, 2},
+    new int[] {4, 2, 5, 9, 8, 1, 3, 7, 6},
+    new int[] {3, 6, 4, 5, 2, 8, 1, 9, 7},
+    new int[] {9, 5, 2, 7, 1, 4, 6, 3, 8},
+    new int[] {8, 1, 7, 3, 9, 6, 2, 4, 5},
+    new int[] {2, 8, 9, 1, 7, 3, 5, 6, 4},
+    new int[] {6, 7, 3, 2, 4, 5, 8, 1, 9},
+    new int[] {5, 4, 1, 8, 6, 9, 7, 2, 3},
 };
+
+PrintPuzzle(puzzle);
+
+static void PrintPuzzle(int[][] puzzle)
+{
+    foreach (var row in puzzle)
+    {
+        foreach (var cell in row)
+            Console.Write(cell + " ");
+        Console.WriteLine();
+    }
+}
 */
+
+
+// Exercise 7.9
+/*
+double[] temps = {21.5, 23.7, 19.6, 22.5, 25.3, 21.7, 18.9};
+string[] days = {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"};
+
+for (int i = 1; i < temps.Length; i++) {
+    double difference = temps[i] - temps[i - 1];
+    Console.WriteLine($"The temperature difference from {days[i - 1]} to {days[i]}: {difference:F1}°C");
+}
+*/
+
+// Exercise 8.8
+/* Write a program in which:
+1. A function calculates the factorial function3 (e.g., fac(4) = 4 · 3 · 2 · 1) without the use of a loop.*/
+
+int[]
+
+
+Console.WriteLine("Give me a number that should be a factorial funktion: ");
+Console.ReadLine();
+
+
+// Exercise 8.9
+// har lavet det med return ting på forrige opgaver
+
+// Exercise 8.5
+/* Write a program in which:
+1. A function called sqrt is defined that calculates the square root of its input (of type
+double) to a precision of a specific (e.g., 7) number of decimals.
+• Hint: Solve this experimentall by starting with the most significant digit of he solution
+and iterate towards the least significant digit. For this, you pick a start and an end,
+and then iterate through these digits. These could be 1000000000 and 0.000000001.
+What should the value of this digit be? When you have found the right value for
+this digit, continue with the next. The right value is that which (when added to the
+previously determined digits and then squared) is ≤ the input. As you iterate through
+the digits, you will get closer and closer to the perfect answer.
+2. Some code demonstrate how to call this function. */
+
