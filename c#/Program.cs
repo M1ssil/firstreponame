@@ -1001,3 +1001,63 @@ Console.WriteLine(meters * factor + " " + unit);
 
 enum Unit { m, cm, mm, inch }
 */
+
+
+// Forelæsning 23/09
+// Its about "return" statement
+
+
+// Linæer funktioner
+/*
+double f (double x) {
+return 2*x-1;
+}
+for (double x=-3 ; x<=3 ; x+=0.5) {
+double y = f(x);
+Console.WriteLine("f("+x+") = "+y);
+}
+*/
+
+// Area of a rectangle
+/*
+int area (int w, int h) {
+return w*h;
+}
+for (int h=0 ; h<=4 ; h+=1) {
+for (int w=0 ; w<=8 ; w+=1) {
+int a = area(w, h);
+Console.Write(" {0,2}", a);
+}
+Console.WriteLine("");
+}
+*/
+
+
+
+// Exercises 23/09
+
+// Exercise 8.4
+/*
+int result = Sum(3, 5);
+Console.WriteLine($"3 + 5 = {result}");
+
+int Sum(int a, int b)
+{
+    return a + b;
+}
+*/
+
+// Exercise 8.3
+/*
+int[][] puzzle = {
+new int[] {7, 3, 6, 4, 5, 2, 9, 8, 1},
+new int[] {1, 9, 8, 6, 3, 7, 4, 5, 2},
+new int[] {4, 2, 5, 9, 8, 1, 3, 7, 6},
+new int[] {3, 6, 4, 5, 2, 8, 1, 9, 7},
+new int[] {9, 5, 2, 7, 1, 4, 6, 3, 8},
+new int[] {8, 1, 7, 3, 9, 6, 2, 4, 5},
+new int[] {2, 8, 9, 1, 7, 3, 5, 6, 4},
+new int[] {6, 7, 3, 2, 4, 5, 8, 1, 9},
+new int[] {5, 4, 1, 8, 6, 9, 7, 2, 3},
+};
+*/
