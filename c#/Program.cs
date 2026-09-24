@@ -1124,29 +1124,43 @@ for (int i = 1; i < temps.Length; i++) {
 */
 
 // Exercise 8.8
-/* Write a program in which:
-1. A function calculates the factorial function3 (e.g., fac(4) = 4 · 3 · 2 · 1) without the use of a loop.*/
+/* Factorial
+int Factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * Factorial(n - 1);
+}
 
-int[]
+Console.WriteLine("Give me a number to calculate the factorial of: ");
+int number = int.Parse(Console.ReadLine());
 
-
-Console.WriteLine("Give me a number that should be a factorial funktion: ");
-Console.ReadLine();
-
+Console.WriteLine($"{number}! = {Factorial(number)}");
+*/
 
 // Exercise 8.9
 // har lavet det med return ting på forrige opgaver
 
 // Exercise 8.5
-/* Write a program in which:
-1. A function called sqrt is defined that calculates the square root of its input (of type
-double) to a precision of a specific (e.g., 7) number of decimals.
-• Hint: Solve this experimentall by starting with the most significant digit of he solution
-and iterate towards the least significant digit. For this, you pick a start and an end,
-and then iterate through these digits. These could be 1000000000 and 0.000000001.
-What should the value of this digit be? When you have found the right value for
-this digit, continue with the next. The right value is that which (when added to the
-previously determined digits and then squared) is ≤ the input. As you iterate through
-the digits, you will get closer and closer to the perfect answer.
-2. Some code demonstrate how to call this function. */
+/*
+double Sqrt(double input) {
+    double result = 0;
+    double step = 1;
+
+    while (step > 0.0000001) {
+        if ((result + step) * (result + step) <= input) {
+            result += step;
+        } else {
+            step /= 10;
+        }
+    }
+
+    return result;
+}
+
+Console.WriteLine("Give me a number to calculate the square root of: ");
+double number = double.Parse(Console.ReadLine());
+Console.WriteLine($"The square root of {number} is approximately {Sqrt(number):F7}");
+*/
+
 
