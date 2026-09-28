@@ -1251,3 +1251,78 @@ finally {
 // close the connection
 }
 */
+
+// Øvelsestime 28/09
+
+// Exercise 9.1
+/*
+int iterationer = 10;
+int[] array = {1, 2, 3, 4, 5};
+// increment
+for (int i=0 ; i<iterationer ; i++) {
+array[i]++;
+}
+// print
+for (int i=0 ; i<array.Length ; i++) {
+Console.WriteLine(array[i]);
+}
+*/
+
+/*
+3. What causes this exception to be thrown?
+4. Use a try-catch construct to skip the iteration that throw this exception.
+5. Is this the correct solution to the problem, and why?
+*/
+
+// Exercise 9.2
+
+int[] accounts = {903, 716, 67};
+int GetAccountNumber ()
+{
+Console.WriteLine("Enter an account number: ");
+return Convert.ToInt32(Console.ReadLine());
+}
+void PrintAccountState (int accountId)
+{
+Console.WriteLine("Account " + accountId + " contains " + accounts[accountId]);
+}
+while (true) {
+int accountId = GetAccountNumber();
+PrintAccountState(accountId);
+}
+
+/* 
+2. Make a variant of the program that uses exception handling in the while loop to make the
+program more robust to this input.
+3. What happens if you give the program “to” as input?
+4. Make a variant of the program that uses exception handling to make the program more
+robust to this input. Where is the right place to add this exception handling? 
+*/
+
+
+// Exercise 9.3 
+
+
+
+/*
+2. Declare an int[] variable called grades and initialize this to hold the grades 4, 7, 02, 00,
+10, 4, og 12.
+3. Then declare a GetGrade function that takes an int as parameter and returns an int.
+Give the parameter the name courseid.
+4. In the body of this function, extract using indexing first a value from the courseid position
+of grades. This value is stored in a local int variable called grade. If this is a passing
+grade, then return the grade. Otherwise, throw an exception.
+5. Finally, write the main program code. It is split into three parts:
+a) Initialization Two variables of the type int are declared and named count and sum.
+b) Process Iterate through all indices (call them courseid) from grades using a for
+loop. Make sure it does not hardcode the number of courses1
+. For every courseid,
+you call GetGrade. Make sure that the the calls that doesn’t result in an exception
+results in (i) count being incremented, and (ii) sum being incremented with the return
+value.
+c) Printout The average
+sum
+count 
+is calculated and printed to the screen.
+6. Verify that the code work as intended.
+*/
