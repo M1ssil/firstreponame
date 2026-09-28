@@ -1164,3 +1164,90 @@ Console.WriteLine($"The square root of {number} is approximately {Sqrt(number):F
 */
 
 
+// forelæsning 28/09
+
+// Exception Handling
+/*
+void work (int count) {
+Console.WriteLine("A slice has to be "+(360/count)+" degrees");
+}
+string[] children = new string[] {"Aslak", "Peter"};
+work(children.Length);
+*/
+
+
+// Exception Handling -> Handling via the Stack
+/*
+void work (int count) {
+Console.WriteLine("A slice has to be "+(360/count)+" degrees");
+}
+string[] children = new string[] {};
+try {
+work(children.Length);
+} catch (DivideByZeroException) {
+Console.WriteLine("No-one to eat the cake. Sad!");
+}
+*/
+
+
+// Exception Handling -> Multiple catch Constructions
+/*
+try {
+Operation(1, 0);
+}
+catch (DivideByZeroException e) {
+Console.WriteLine("Unable to do division.");
+Console.WriteLine(e);
+}
+catch (NegativeDivisorException ex) {
+Console.WriteLine("Unable to do division.");
+Console.WriteLine(ex);
+}
+*/
+
+
+// Throwing Exceptions
+/* 
+double divide (double a, double b)
+{
+if (b == 0) {
+throw new Exception("B is equal to 0");
+}
+return a/b;
+}
+*/
+
+
+// Propagation of Exceptions -> Rethrowing
+/*
+int work (int dividend, int divisor) {
+return dividend/divisor;
+}
+int intermediary (int dividend, int divisor) {
+try {
+return work(dividend, divisor);
+} catch (DivideByZeroException e) {
+Console.WriteLine("Oh, shit!");
+throw new Exception("Divisor was invalid.", e);
+}
+}
+int[] divisors = new int[] {2, 1, 0, -1, -2};
+foreach (int divisor in divisors) {
+Console.WriteLine(intermediary(42, divisor));
+}
+*/
+
+// Finally -> Example
+/*
+// finally constructs are often used to handle problems that occur outside our program.
+try {
+// open a network connection
+// communicate over the connection
+}
+catch (IOException e) {
+// report the error
+}
+finally {
+// close the connection
+}
+*/
