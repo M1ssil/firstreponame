@@ -1276,7 +1276,7 @@ Console.WriteLine(array[i]);
 */
 
 // Exercise 9.2
-
+/*
 int[] accounts = {903, 716, 67};
 int GetAccountNumber ()
 {
@@ -1291,6 +1291,7 @@ while (true) {
 int accountId = GetAccountNumber();
 PrintAccountState(accountId);
 }
+*/ 
 
 /* 
 2. Make a variant of the program that uses exception handling in the while loop to make the
@@ -1349,22 +1350,74 @@ Explain the last line, and focus on:
 • What does the variable shouldBuy represent? --> if the person should buy the book or not.
 */
 
-//Exercise 8.7: Discriminants and Roots
-Write a program in which:
+
+//Exercise 8.7: Discriminants and Roots --> Andengrads pis
+/* Write a program in which:
 1. There is a function called discriminant that calculates a discriminant basend on the
 parameters a, b and c.
+
+
 2. There is a function called roots that takes the paramters a, b and c from a quadratic
 polynomial , and returns an array of roots.
+
+
 • Hint: You can use Math.Sqrt(9.0) to calculate √9.
-3. There is code that demonstrates how to call roots and prints out the result.
+3. There is code that demonstrates how to call roots and prints out the result */
 
 
 //Exercise 7.13: Calendar Prettyprinting
-Write a program in which
-1. A data structure is created to hold the calendar of a single year. One needs to be able
-to index it using a date (month and day) in order to extract which weekday it is (e.g.,
-Monday).
-• What is the type of this data structure?
-• How do you initialize a variable of this type?
-• How can you make sure that the contents is correct?
-2. Print out the contents of this data structure in a “nice” way
+/*
+string[] weekdays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+string[] monthNames = { "January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December" };
+int[] daysInMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+int year = 2026;
+int startWeekday = 3; // 1 Jan 2026 is a Thursday (index 3 in weekdays)
+
+int[][] calendar = new int[12][];
+
+int current = startWeekday;
+for (int m = 0; m < 12; m++)
+{
+    calendar[m] = new int[daysInMonth[m]];
+
+    for (int d = 0; d < daysInMonth[m]; d++)
+    {
+        calendar[m][d] = current;
+        current = (current + 1) % 7;
+    }
+}
+
+Console.Write("Write a number between 1 and 365: ");
+int number = int.Parse(Console.ReadLine());
+
+int month = 0;
+int day = number - 1; // 0-based day of the year
+
+while (day >= daysInMonth[month])
+{
+    day -= daysInMonth[month];
+    month++;
+}
+
+Console.WriteLine($"In {year}, day {number} is {monthNames[month]} {day + 1}, which is a {weekdays[calendar[month][day]]}.");
+
+for (int m = 0; m < 12; m++)
+{
+    Console.WriteLine($"\n{monthNames[m]} {year}");
+    Console.WriteLine("Mo Tu We Th Fr Sa Su");
+
+    // indent the first week so day 1 lands under the right weekday
+    Console.Write(new string(' ', calendar[m][0] * 3));
+
+    for (int d = 0; d < calendar[m].Length; d++)
+    {
+        Console.Write($"{d + 1,2} ");
+
+        if (calendar[m][d] == 6) // Sunday, so start a new row
+            Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+*/
