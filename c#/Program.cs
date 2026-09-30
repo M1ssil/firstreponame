@@ -1276,7 +1276,7 @@ Console.WriteLine(array[i]);
 */
 
 // Exercise 9.2
-/*
+
 int[] accounts = {903, 716, 67};
 int GetAccountNumber ()
 {
@@ -1302,10 +1302,7 @@ robust to this input. Where is the right place to add this exception handling?
 
 
 // Exercise 9.3 
-
-
-
-
+/*
 int[] grades = {4, 7, 02, 00, 10, 4, 12};
 
 int GetGrade(int courseid) {
@@ -1326,6 +1323,7 @@ for (int courseid = 0; courseid < grades.Length; courseid++) {
 }
 
 Console.WriteLine((double)sum / count);
+*/
 
 
 // Forelæsning 30/09
@@ -1337,9 +1335,36 @@ Console.WriteLine((double)sum / count);
 
 
 //Exercise 5.19: Decision of Purchase
+/*
+double price = 599.95;
+double budget = 1000.0;
+bool requiredReading = true;
+bool shouldBuy = price < budget && requiredReading;
 
+Explain the last line, and focus on:
+• In which order is what calculated? --> if the budget is higher than the price and the required reading is true,
+                                         you should buy it.
+• Which values (named and otherwise) are each operator evaluated on? --> 
+• What are the types of these values? --> 
+• What does the variable shouldBuy represent? --> if the person should buy the book or not.
+*/
 
 //Exercise 8.7: Discriminants and Roots
+Write a program in which:
+1. There is a function called discriminant that calculates a discriminant basend on the
+parameters a, b and c.
+2. There is a function called roots that takes the paramters a, b and c from a quadratic
+polynomial , and returns an array of roots.
+• Hint: You can use Math.Sqrt(9.0) to calculate √9.
+3. There is code that demonstrates how to call roots and prints out the result.
 
 
 //Exercise 7.13: Calendar Prettyprinting
+Write a program in which
+1. A data structure is created to hold the calendar of a single year. One needs to be able
+to index it using a date (month and day) in order to extract which weekday it is (e.g.,
+Monday).
+• What is the type of this data structure?
+• How do you initialize a variable of this type?
+• How can you make sure that the contents is correct?
+2. Print out the contents of this data structure in a “nice” way
