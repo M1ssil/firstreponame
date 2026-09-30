@@ -1252,6 +1252,7 @@ finally {
 }
 */
 
+
 // Øvelsestime 28/09
 
 // Exercise 9.1
@@ -1275,7 +1276,7 @@ Console.WriteLine(array[i]);
 */
 
 // Exercise 9.2
-
+/*
 int[] accounts = {903, 716, 67};
 int GetAccountNumber ()
 {
@@ -1304,25 +1305,41 @@ robust to this input. Where is the right place to add this exception handling?
 
 
 
-/*
-2. Declare an int[] variable called grades and initialize this to hold the grades 4, 7, 02, 00,
-10, 4, og 12.
-3. Then declare a GetGrade function that takes an int as parameter and returns an int.
-Give the parameter the name courseid.
-4. In the body of this function, extract using indexing first a value from the courseid position
-of grades. This value is stored in a local int variable called grade. If this is a passing
-grade, then return the grade. Otherwise, throw an exception.
-5. Finally, write the main program code. It is split into three parts:
-a) Initialization Two variables of the type int are declared and named count and sum.
-b) Process Iterate through all indices (call them courseid) from grades using a for
-loop. Make sure it does not hardcode the number of courses1
-. For every courseid,
-you call GetGrade. Make sure that the the calls that doesn’t result in an exception
-results in (i) count being incremented, and (ii) sum being incremented with the return
-value.
-c) Printout The average
-sum
-count 
-is calculated and printed to the screen.
-6. Verify that the code work as intended.
-*/
+
+int[] grades = {4, 7, 02, 00, 10, 4, 12};
+
+int GetGrade(int courseid) {
+    int grade = grades[courseid];
+    if (grade >= 2) return grade;
+    throw new Exception("Failing grade");
+}
+
+int count = 0;
+int sum = 0;
+
+for (int courseid = 0; courseid < grades.Length; courseid++) {
+    try {
+        sum += GetGrade(courseid);
+        count++;
+    }
+    catch (Exception) { }
+}
+
+Console.WriteLine((double)sum / count);
+
+
+// Forelæsning 30/09
+
+
+
+
+// Øvelsestime 30/09 
+
+
+//Exercise 5.19: Decision of Purchase
+
+
+//Exercise 8.7: Discriminants and Roots
+
+
+//Exercise 7.13: Calendar Prettyprinting
