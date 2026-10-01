@@ -938,16 +938,6 @@ for (double i = 1; i <= 12; i += 0.5)
 */
 
 
-// Exercise 5.19
-/* 
-double price = 599.95;
-double budget = 1000.0;
-bool requiredReading = true;
-bool shouldBuy = price < budget && requiredReading; 
-*/ 
-// idk what is this focused on (må løse den senere)
-
-
 // Exercise 5.21
 /* 
 int b = a + 1;
@@ -1352,18 +1342,56 @@ Explain the last line, and focus on:
 
 
 //Exercise 8.7: Discriminants and Roots --> Andengrads pis
-/* Write a program in which:
-1. There is a function called discriminant that calculates a discriminant basend on the
-parameters a, b and c.
+// Hint: You can use Math.Sqrt(9.0) to calculate √9.
 
+/*
+Console.Write("Enter a: ");
+double a = double.Parse(Console.ReadLine());
+Console.Write("Enter b: ");
+double b = double.Parse(Console.ReadLine());
+Console.Write("Enter c: ");
+double c = double.Parse(Console.ReadLine());
 
-2. There is a function called roots that takes the paramters a, b and c from a quadratic
-polynomial , and returns an array of roots.
+// discriminant
+double Discriminant(double a, double b, double c)
+{
+    return b * b - 4 * a * c;
+}
 
+//roots
+double[] Roots(double a, double b, double c)
+{
+    double d = Discriminant(a, b, c);
 
-• Hint: You can use Math.Sqrt(9.0) to calculate √9.
-3. There is code that demonstrates how to call roots and prints out the result */
+    if (d > 0)
+    {
+        return new double[]
+        {
+            (-b + Math.Sqrt(d)) / (2 * a),
+            (-b - Math.Sqrt(d)) / (2 * a)
+        };
+    }
+    else if (d == 0)
+    {
+        return new double[] { -b / (2 * a) };
+    }
+    else
+    {
+        return new double[0];
+    }
+}
 
+double[] result = Roots(a, b, c);
+
+if (result.Length == 0)
+{
+    Console.WriteLine("No roots");
+}
+foreach (double root in result)
+{
+    Console.WriteLine("The root of this function is "+root);
+}
+*/
 
 //Exercise 7.13: Calendar Prettyprinting
 /*
@@ -1421,4 +1449,3 @@ for (int m = 0; m < 12; m++)
     Console.WriteLine();
 }
 */
-a
