@@ -1319,7 +1319,7 @@ Console.WriteLine((double)sum / count);
 
 // Forelæsning 30/09
 
-
+// vi fik lavet en card game og en hangman som ligger i de andre directiories
 
 
 // Øvelsestime 30/09 
@@ -1353,42 +1353,34 @@ Console.Write("Enter c: ");
 double c = double.Parse(Console.ReadLine());
 
 // discriminant
-double Discriminant(double a, double b, double c)
-{
+double Discriminant(double a, double b, double c) {
     return b * b - 4 * a * c;
 }
 
 //roots
-double[] Roots(double a, double b, double c)
-{
+double[] Roots(double a, double b, double c) {
     double d = Discriminant(a, b, c);
 
-    if (d > 0)
-    {
-        return new double[]
-        {
+    if (d > 0) {
+        return new double[] {
             (-b + Math.Sqrt(d)) / (2 * a),
             (-b - Math.Sqrt(d)) / (2 * a)
         };
     }
-    else if (d == 0)
-    {
+    else if (d == 0) {
         return new double[] { -b / (2 * a) };
     }
-    else
-    {
+    else {
         return new double[0];
     }
 }
 
 double[] result = Roots(a, b, c);
 
-if (result.Length == 0)
-{
+if (result.Length == 0) {
     Console.WriteLine("No roots");
 }
-foreach (double root in result)
-{
+foreach (double root in result) {
     Console.WriteLine("The root of this function is "+root);
 }
 */
@@ -1447,5 +1439,277 @@ for (int m = 0; m < 12; m++)
             Console.WriteLine();
     }
     Console.WriteLine();
+    }
+    */
+
+
+// forelæsning 05/10
+
+// Structs and Functions
+/*
+string PointGetColor (Point p) {
+return p.color;
+}
+void PointSetColor (Point p, string color) {
+p.color = color;
+}
+double PointDist (Point a, Point b) {
+return Math.Sqrt((a.x-b.x)*(a.x-b.x) + (a.y-b.y)*(a.y-b.y));
+}
+Point p0 = new Point{x=0, y=0, color="black"};
+Point p1 = new Point{x=1, y=1, color="red"};
+PointSetColor(p1, "blue");
+Console.WriteLine("dist between p0 and p1 is "+PointDist(p0, p1));
+Console.WriteLine("p1 is "+PointGetColor(p1));
+class Point {
+public double x;
+public double y;
+public string color;
+}
+*/
+
+// Objects and Methods
+/*
+Point p0 = new Point(0, 0, "black");
+Point p1 = new Point(1, 1, "red");
+p1.SetColor("blue");
+Console.WriteLine("dist between p0 and p1 is "+p0.Dist(p1));
+Console.WriteLine("p1 is "+p1.GetColor());
+class Point {
+double x;
+double y;
+string color;
+public Point(double xValue, double yValue, string colorValue) {
+x = xValue;
+y = yValue;
+color = colorValue;
+}
+public string GetColor() {
+return color;
+}
+public void SetColor (string colorValue) {
+color = colorValue;
+}
+public double Dist (Point b) {
+return Math.Sqrt((x-b.x)*(x-b.x) + (y-b.y)*(y-b.y));
+}
+}
+*/
+
+
+// Functions vs Methods
+/* 
+// A method is a function that operates in a context.
+class Point {
+double x;
+double y;
+string color;
+public Point(double xValue, double yValue, string colorValue) {
+x = xValue;
+y = yValue;
+color = colorValue;
+}
+public void SetColor (string colorValue) {
+color = colorValue;
+}
+}
+*/
+
+// Classes --> content
+/*
+public class Point {
+// attributes
+public double x;
+public double y;
+// constructors
+public Point (double startX, double startY) {
+x = startX;
+y = startY;
+}
+// methods
+public double getX () {
+return x;
+}
+}
+*/
+
+// Creating Objects --> The “new” Keyword
+/*
+Point mypoint = new Point(2.0, 3.0);
+*/
+
+// Atributes
+/*
+Point p = new Point();
+p.x = 1;
+p.y = 2;
+Console.WriteLine("p = ("+p.x+", "+p.y+")");
+public class Point
+{
+public int x;
+public int y;
+}
+*/
+
+// methods
+/*
+Rectangle p = new Rectangle();
+p.width = 1;
+p.height = 2;
+Console.WriteLine("area = ("+p.getArea()+")");
+public class Rectangle
+{
+public Point center;
+public double width;
+public double height;
+public double getArea () {
+return width*height;
+}
+}
+*/
+
+// Constructors --> Specialized Methods
+/*
+public class Circle
+{
+public double x, y, radius;
+public Circle () {
+x = 1.3 * 10;
+y = 1.3 * 10;
+radius = 1.3 * 17;
+}
+public Circle (double x_val, double radius_val) {
+x = x_val;
+y = 1.3 * 10;
+radius = radius_val;
+}
+public Circle (double x_val, double y_val, double radius_val) {
+x = x_val;
+y = y_val;
+radius = radius_val;
+}
+}
+*/
+
+// Object References
+/* 
+Rectangle r1, r2, r3, r4;
+r1 = new Rectangle(11, 12, "red");
+r2 = new Rectangle(21, 22, "blue");
+r3 = null; // explicitly assign null value
+r4 = r2; // assign reference of r2 to r4
+// assign values to the instance variables
+// of the objects referenced by r1 and r2
+r1.width = 13;
+r2.width = 23;
+Console.WriteLine(r2.width); // output?
+r4.width = 43;
+Console.WriteLine(r2.width); // output?
+*/
+
+// øvelsestime 05/10
+/*
+using System; // åbenbart vigtig ellers kan den ikke runne
+
+// Exercise 12.1-2
+// 3. In the Customer class, add the following:
+public class Customer {
+    public string Name;
+    public int Id;
+    public double Balance;
+
+// 4. Add constructors to the Customer class:
+    public Customer(string name, int id) {
+        Name = name;
+        Id = id;
+        Balance = 0;
+    }
+
+    public Customer(string name, int id, double balance) {
+        Name = name;
+        Id = id;
+        Balance = balance;
+    }
+
+// 5. Add methods to the Customer class:
+    public void Deposit(double amount) {
+        Balance += amount;
+    }
+
+    public void Withdraw(double amount) {
+        if (Balance >= amount) {
+            Balance -= amount;
+        }
+    }
+
+    public double GetBalance() {
+        return Balance;
+    }
+
+// 6. In the Main method, declare a variable called aCustomer of type Customer.
+    public static void TestCustomer() { // Omdøbt fra Main, så der kun er ét entry point
+        Customer aCustomer = new Customer("Donald Knuth", 42, 0);
+        Console.WriteLine(aCustomer.Name + " has a balance of " + aCustomer.GetBalance() + "$!");
+        aCustomer.Deposit(1000);
+        Console.WriteLine(aCustomer.Name + " did a deposit of " + aCustomer.GetBalance() + "$!");
+        aCustomer.Withdraw(500);
+        Console.WriteLine(aCustomer.Name + " withdrew " + aCustomer.GetBalance() + "$!");
+    }
+}
+
+// Exercise 12.2
+// 2. Add an attribute named customers of type Customer[] to CustomerDatabase
+public class CustomerDatabase {
+    public Customer[] customers;
+
+// 3. Add a constructor to CustomerDatabase that doesn’t take any parameters.
+    public CustomerDatabase() {
+        customers = new Customer[10];
+    }
+
+// 4. Add the following methods to CustomerDatabase:
+    public void AddCustomer(Customer customer) {
+        for (int i = 0; i < customers.Length; i++) {
+            if (customers[i] == null) {
+                customers[i] = customer;
+                return;
+            }
+        }
+    }
+
+    public void RemoveCustomer(int id) {
+        for (int i = 0; i < customers.Length; i++) {
+            if (customers[i] != null && customers[i].Id == id) {
+                customers[i] = null;
+                return;
+            }
+        }
+    }
+
+    public Customer[] GetCustomers() {
+        return customers;
+    }
+
+    public void PrintCustomers() {
+        for (int i = 0; i < customers.Length; i++) {
+            if (customers[i] != null) {
+                Console.WriteLine(customers[i].Name + " (id " + customers[i].Id + "): " + customers[i].Balance + "$");
+            }
+        }
+    }
+
+// 5. Add a main method to test the new functionality. How would you do this?
+    public static void Main(string[] args) {
+        CustomerDatabase database = new CustomerDatabase();
+
+        database.AddCustomer(new Customer("Kebabmester", 1, 1002));
+        database.AddCustomer(new Customer("Kebab", 2, 500));
+        database.PrintCustomers();
+
+        database.RemoveCustomer(1);
+        database.PrintCustomers();
+
+        Console.WriteLine("Længde på array: " + database.GetCustomers().Length);
+    }
 }
 */
